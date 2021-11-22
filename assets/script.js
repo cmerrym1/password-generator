@@ -15,25 +15,32 @@ function generatePassword() {
     console.log(lower);
 
   var numeric = confirm("Would you like to include numbers?");
-  console.log(numeric);
+    console.log(numeric);
 
   var specialChar = confirm("Would you like to include special characters?");
     console.log(specialChar);
 
   let caps = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
-  let index = Math.floor(Math.random()*caps.length)
-  console.log(index);
-  
+  let index1 = Math.floor(Math.random() * caps.length);
+  if (capital === true) {
+  console.log(index1,caps[index1]);
+  } else {
+    console.log();
+  };
 
   let lows = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
-    console.log(lows[10]);
+  let index2 = Math.floor(Math.random() * lows.length);
+  console.log(index2,lows[index2]);
 
   let num = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
-    console.log(num[6]);
+  let index3 = Math.floor(Math.random() * num.length);
+  console.log(index3,num[index3]);
 
   let spec = ['!', '@', '#', '$', '%', '&', '*'];
-    console.log(spec[1]);
+  let index4 = Math.floor(Math.random() * spec.length);
+  console.log(index4,spec[index4]);
 
+  return (index1,caps[index1])+(index2,lows[index2])+(index3,num[index3])+(index4,spec[index4]);
   }
 
 
